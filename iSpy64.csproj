@@ -7,7 +7,7 @@
     <ProjectGuid>{F4799C73-DEE9-48F2-B626-32149CC30976}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>ispy.ico</ApplicationIcon>
+    <ApplicationIcon>Sources\ispy.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>iSpy</AssemblyName>
@@ -34,7 +34,7 @@
     </SccProvider>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationManifest>Sources\app.manifest</ApplicationManifest>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -255,10 +255,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Kinect\v1.8\Assemblies\Microsoft.Kinect.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
       <Private>True</Private>
@@ -357,19 +353,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutForm.cs">
+    <Compile Include="Sources\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddFloorPlan.cs">
+    <Compile Include="Sources\AddFloorPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddFloorPlan.Designer.cs">
+    <Compile Include="Sources\AddFloorPlan.Designer.cs">
       <DependentUpon>AddFloorPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddRemoteCommand.cs">
+    <Compile Include="Sources\AddRemoteCommand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddRemoteCommand.Designer.cs">
+    <Compile Include="Sources\AddRemoteCommand.Designer.cs">
       <DependentUpon>AddRemoteCommand.cs</DependentUpon>
     </Compile>
     <Compile Include="CameraDiscovery\CameraScanner.cs" />
@@ -381,11 +377,11 @@
     <Compile Include="Cloud\Flickr.cs" />
     <Compile Include="Cloud\OneDrive.cs" />
     <Compile Include="Cloud\YouTubeUploader.cs" />
-    <Compile Include="CommandButtons.cs">
+    <Compile Include="Sources\CommandButtons.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CommandButtons.Designer.cs">
-      <DependentUpon>CommandButtons.cs</DependentUpon>
+    <Compile Include="Sources\CommandButtons.Designer.cs">
+      <DependentUpon>Sources\CommandButtons.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Authorizer.cs">
       <SubType>Form</SubType>
@@ -447,16 +443,16 @@
     <Compile Include="Controls\TagEntry.Designer.cs">
       <DependentUpon>TagEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindObject.cs">
+    <Compile Include="Sources\FindObject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindObject.Designer.cs">
+    <Compile Include="Sources\FindObject.Designer.cs">
       <DependentUpon>FindObject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Importer.cs">
+    <Compile Include="Sources\Importer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Importer.Designer.cs">
+    <Compile Include="Sources\Importer.Designer.cs">
       <DependentUpon>Importer.cs</DependentUpon>
     </Compile>
     <Compile Include="Onvif\Behaviour\CustomAddressHeader.cs" />
@@ -472,10 +468,10 @@
     <Compile Include="Onvif\ONVIFDevice.cs" />
     <Compile Include="Onvif\Security\DigestSecurityHeader.cs" />
     <Compile Include="Onvif\Security\SecurityToken.cs" />
-    <Compile Include="PTZConfig.cs">
+    <Compile Include="Sources\PTZConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PTZConfig.Designer.cs">
+    <Compile Include="Sources\PTZConfig.Designer.cs">
       <DependentUpon>PTZConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="Realtime\MediaWriter.cs" />
@@ -502,10 +498,10 @@
     <Compile Include="Sources\Video\MediaStream.cs" />
     <Compile Include="Sources\Video\Tokeniser.cs" />
     <Compile Include="Sources\Video\VideoBase.cs" />
-    <Compile Include="TagConfigure.cs">
+    <Compile Include="Sources\TagConfigure.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TagConfigure.Designer.cs">
+    <Compile Include="Sources\TagConfigure.Designer.cs">
       <DependentUpon>TagConfigure.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ConnectionFactory.cs" />
@@ -709,7 +705,7 @@
     <Compile Include="Controls\VideoPlayback.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Delegates.cs" />
+    <Compile Include="Sources\Delegates.cs" />
     <Compile Include="DirectShow\CameraControlProperty.cs" />
     <Compile Include="DirectShow\FilterInfo.cs" />
     <Compile Include="DirectShow\FilterInfoCollection.cs" />
@@ -746,27 +742,21 @@
     <Compile Include="DirectShow\Uuids.cs" />
     <Compile Include="DirectShow\VideoCapabilities.cs" />
     <Compile Include="DirectShow\VideoInput.cs" />
-    <Compile Include="EncDec.cs" />
-    <Compile Include="Events.cs" />
-    <Compile Include="Features.cs">
+    <Compile Include="Sources\EncDec.cs" />
+    <Compile Include="Sources\Events.cs" />
+    <Compile Include="Sources\Features.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Features.Designer.cs">
+    <Compile Include="Sources\Features.Designer.cs">
       <DependentUpon>Features.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridViewManager.cs">
+    <Compile Include="Sources\GridViewManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridViewManager.Designer.cs">
+    <Compile Include="Sources\GridViewManager.Designer.cs">
       <DependentUpon>GridViewManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Joystick\JoystickDevice.cs" />
-    <Compile Include="Kinect\ConfigureTripWires.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Kinect\ConfigureTripWires.Designer.cs">
-      <DependentUpon>ConfigureTripWires.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\AngleSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -779,40 +769,40 @@
     <Compile Include="Controls\AreaSelector.Designer.cs">
       <DependentUpon>AreaSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="CameraMicSource.cs">
+    <Compile Include="Sources\CameraMicSource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CameraMicSource.Designer.cs">
+    <Compile Include="Sources\CameraMicSource.Designer.cs">
       <DependentUpon>CameraMicSource.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigureSeconds.cs">
+    <Compile Include="Sources\ConfigureSeconds.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigureSeconds.Designer.cs">
+    <Compile Include="Sources\ConfigureSeconds.Designer.cs">
       <DependentUpon>ConfigureSeconds.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigureProcessor.cs">
+    <Compile Include="Sources\ConfigureProcessor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigureProcessor.Designer.cs">
+    <Compile Include="Sources\ConfigureProcessor.Designer.cs">
       <DependentUpon>ConfigureProcessor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigureTimestamp.cs">
+    <Compile Include="Sources\ConfigureTimestamp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigureTimestamp.Designer.cs">
+    <Compile Include="Sources\ConfigureTimestamp.Designer.cs">
       <DependentUpon>ConfigureTimestamp.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigureObjectCount.cs">
+    <Compile Include="Sources\ConfigureObjectCount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigureObjectCount.Designer.cs">
+    <Compile Include="Sources\ConfigureObjectCount.Designer.cs">
       <DependentUpon>ConfigureObjectCount.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigureRepeat.cs">
+    <Compile Include="Sources\ConfigureRepeat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigureRepeat.Designer.cs">
+    <Compile Include="Sources\ConfigureRepeat.Designer.cs">
       <DependentUpon>ConfigureRepeat.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ClipboardTextBox.cs">
@@ -830,63 +820,53 @@
     <Compile Include="Controls\GridView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="downloader.cs">
+    <Compile Include="Sources\downloader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="downloader.Designer.cs">
+    <Compile Include="Sources\downloader.Designer.cs">
       <DependentUpon>downloader.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileOperations.cs" />
-    <Compile Include="GridView.cs">
+    <Compile Include="Sources\FileOperations.cs" />
+    <Compile Include="Sources\GridView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridView.Designer.cs">
+    <Compile Include="Sources\GridView.Designer.cs">
       <DependentUpon>GridView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kinect\DepthLine.cs" />
-    <Compile Include="Kinect\EditDepthLine.cs">
+    <Compile Include="Sources\LayoutItem.cs" />
+    <Compile Include="Sources\Mailer.cs" />
+    <Compile Include="Sources\MainForm_Commands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kinect\EditDepthLine.Designer.cs">
-      <DependentUpon>EditDepthLine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Kinect\TripWireEditor.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="LayoutItem.cs" />
-    <Compile Include="Mailer.cs" />
-    <Compile Include="MainForm_Commands.cs">
+    <Compile Include="Sources\MainForm_Configuration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm_Configuration.cs">
+    <Compile Include="Sources\MainForm_Media.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm_Media.cs">
+    <Compile Include="Sources\Merger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Merger.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Merger.Designer.cs">
+    <Compile Include="Sources\Merger.Designer.cs">
       <DependentUpon>Merger.cs</DependentUpon>
     </Compile>
-    <Compile Include="MicrophoneSourceAdvanced.cs">
+    <Compile Include="Sources\MicrophoneSourceAdvanced.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MicrophoneSourceAdvanced.Designer.cs">
+    <Compile Include="Sources\MicrophoneSourceAdvanced.Designer.cs">
       <DependentUpon>MicrophoneSourceAdvanced.cs</DependentUpon>
     </Compile>
-    <Compile Include="MimeTypes.cs" />
-    <Compile Include="NotSubscribed.cs">
+    <Compile Include="Sources\MimeTypes.cs" />
+    <Compile Include="Sources\NotSubscribed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NotSubscribed.Designer.cs">
+    <Compile Include="Sources\NotSubscribed.Designer.cs">
       <DependentUpon>NotSubscribed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pager.cs">
+    <Compile Include="Sources\Pager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pager.Designer.cs">
+    <Compile Include="Sources\Pager.Designer.cs">
       <DependentUpon>Pager.cs</DependentUpon>
     </Compile>
     <Compile Include="Pelco\D.cs" />
@@ -897,32 +877,32 @@
     <Compile Include="Pelco\PelcoConfig.Designer.cs">
       <DependentUpon>PelcoConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayerVLC.cs">
+    <Compile Include="Sources\PlayerVLC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlayerVLC.Designer.cs">
+    <Compile Include="Sources\PlayerVLC.Designer.cs">
       <DependentUpon>PlayerVLC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prompt.cs">
+    <Compile Include="Sources\Prompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Prompt.Designer.cs">
+    <Compile Include="Sources\Prompt.Designer.cs">
       <DependentUpon>Prompt.cs</DependentUpon>
     </Compile>
-    <Compile Include="PTZController.cs" />
-    <Compile Include="PTZTool.cs">
+    <Compile Include="Sources\PTZController.cs" />
+    <Compile Include="Sources\PTZTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PTZTool.Designer.cs">
+    <Compile Include="Sources\PTZTool.Designer.cs">
       <DependentUpon>PTZTool.cs</DependentUpon>
     </Compile>
-    <Compile Include="RestartableStream.cs" />
-    <Compile Include="SerializableFont.cs" />
+    <Compile Include="Sources\RestartableStream.cs" />
+    <Compile Include="Sources\SerializableFont.cs" />
     <Compile Include="Server\LocalServer.cs" />
-    <Compile Include="ShareCamera.cs">
+    <Compile Include="Sources\ShareCamera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShareCamera.Designer.cs">
+    <Compile Include="Sources\ShareCamera.Designer.cs">
       <DependentUpon>ShareCamera.cs</DependentUpon>
     </Compile>
     <Compile Include="Sources\Audio\AudioEvents.cs" />
@@ -960,7 +940,6 @@
     <Compile Include="Sources\Audio\talk\TalkIPWebcamAndroid.cs" />
     <Compile Include="Sources\Audio\talk\TalkiSpyServer.cs" />
     <Compile Include="Sources\Audio\talk\TalkLocal.cs" />
-    <Compile Include="Sources\Audio\talk\TalkNetworkKinect.cs" />
     <Compile Include="Sources\Audio\VolumeWaveProvider16.cs" />
     <Compile Include="Sources\PlayEvents.cs" />
     <Compile Include="Sources\Video\CloneStream.cs" />
@@ -968,8 +947,6 @@
     <Compile Include="Sources\Video\discovery\localdevice.cs" />
     <Compile Include="Sources\Video\IVideoSource.cs" />
     <Compile Include="Sources\Video\JPEGStream.cs" />
-    <Compile Include="Sources\Video\KinectNetworkStream.cs" />
-    <Compile Include="Sources\Video\KinectStream.cs" />
     <Compile Include="Sources\Video\MJPEGStream.cs" />
     <Compile Include="Sources\Video\VideoCaptureDevice.cs" />
     <Compile Include="Sources\Video\VLCStream.cs" />
@@ -984,10 +961,10 @@
     <Compile Include="Sources\Video\Ximea\TriggerSource.cs" />
     <Compile Include="Sources\Video\Ximea\XimeaCamera.cs" />
     <Compile Include="Sources\Video\Ximea\XimeaVideoSource.cs" />
-    <Compile Include="SSLConfig.cs">
+    <Compile Include="Sources\SSLConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SSLConfig.Designer.cs">
+    <Compile Include="Sources\SSLConfig.Designer.cs">
       <DependentUpon>SSLConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ConnectionOptions.cs" />
@@ -1003,10 +980,10 @@
       <DependentUpon>ScreenArea.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\VLCHelper.cs" />
-    <Compile Include="VideoSourceAdvanced.cs">
+    <Compile Include="Sources\VideoSourceAdvanced.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VideoSourceAdvanced.Designer.cs">
+    <Compile Include="Sources\VideoSourceAdvanced.Designer.cs">
       <DependentUpon>VideoSourceAdvanced.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\VolumeLevel.cs">
@@ -1015,137 +992,128 @@
     <Compile Include="Controls\VolumeLevel.Designer.cs">
       <DependentUpon>VolumeLevel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindCameras.cs">
+    <Compile Include="Sources\FindCameras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindCameras.Designer.cs">
+    <Compile Include="Sources\FindCameras.Designer.cs">
       <DependentUpon>FindCameras.cs</DependentUpon>
     </Compile>
-    <Compile Include="GettingStarted.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GettingStarted.Designer.cs">
-      <DependentUpon>GettingStarted.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HSLFilteringForm.cs">
+    <Compile Include="Sources\HSLFilteringForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\LayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ListNetworkComputers.cs" />
-    <Compile Include="MCRemote.cs" />
-    <Compile Include="NativeCalls.cs" />
-    <Compile Include="NetworkTroubleshooter.cs">
+    <Compile Include="Sources\ListNetworkComputers.cs" />
+    <Compile Include="Sources\MCRemote.cs" />
+    <Compile Include="Sources\NativeCalls.cs" />
+    <Compile Include="Sources\NetworkTroubleshooter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NetworkTroubleshooter.Designer.cs">
+    <Compile Include="Sources\NetworkTroubleshooter.Designer.cs">
       <DependentUpon>NetworkTroubleshooter.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\PreviewBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="QueueWithEvents.cs" />
-    <Compile Include="Screensaver.cs" />
+    <Compile Include="Sources\QueueWithEvents.cs" />
+    <Compile Include="Sources\Screensaver.cs" />
     <Compile Include="Controls\VideoNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\VideoNavigator.Designer.cs">
       <DependentUpon>VideoNavigator.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewController.cs">
+    <Compile Include="Sources\ViewController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewController.Designer.cs">
+    <Compile Include="Sources\ViewController.Designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ViewControllerPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="AssemblyInfo.cs">
+    <Compile Include="Sources\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ByteArrayUtils.cs" />
-    <Compile Include="C2BPProcessor.cs" />
+    <Compile Include="Sources\ByteArrayUtils.cs" />
+    <Compile Include="Sources\C2BPProcessor.cs" />
     <Compile Include="Controls\Camera.cs" />
-    <Compile Include="AddCamera.cs">
+    <Compile Include="Sources\AddCamera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCamera.Designer.cs">
+    <Compile Include="Sources\AddCamera.Designer.cs">
       <DependentUpon>AddCamera.cs</DependentUpon>
     </Compile>
-    <Compile Include="CheckPassword.cs">
+    <Compile Include="Sources\CheckPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheckPassword.Designer.cs">
+    <Compile Include="Sources\CheckPassword.Designer.cs">
       <DependentUpon>CheckPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddMicrophone.cs">
+    <Compile Include="Sources\AddMicrophone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMicrophone.Designer.cs">
+    <Compile Include="Sources\AddMicrophone.Designer.cs">
       <DependentUpon>AddMicrophone.cs</DependentUpon>
     </Compile>
-    <Compile Include="C2BPComparers.cs" />
-    <Compile Include="LocRM.cs" />
-    <Compile Include="Firewall.cs" />
+    <Compile Include="Sources\C2BPComparers.cs" />
+    <Compile Include="Sources\LocRM.cs" />
+    <Compile Include="Sources\Firewall.cs" />
     <Compile Include="Controls\FloorPlan.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\FloorPlan.Designer.cs">
       <DependentUpon>FloorPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="extensions.cs" />
-    <Compile Include="ftp.cs" />
-    <Compile Include="Helper.cs" />
-    <Compile Include="LayoutEditor.cs">
+    <Compile Include="Sources\extensions.cs" />
+    <Compile Include="Sources\ftp.cs" />
+    <Compile Include="Sources\Helper.cs" />
+    <Compile Include="Sources\LayoutEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LayoutEditor.Designer.cs">
+    <Compile Include="Sources\LayoutEditor.Designer.cs">
       <DependentUpon>LayoutEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="MicrophoneSource.cs">
+    <Compile Include="Sources\MicrophoneSource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MicrophoneSource.Designer.cs">
+    <Compile Include="Sources\MicrophoneSource.Designer.cs">
       <DependentUpon>MicrophoneSource.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewVersion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Enums.cs" />
+    <Compile Include="Sources\Enums.cs" />
     <Compile Include="Controls\PersistForm.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RemoteCommands.cs">
+    <Compile Include="Sources\RemoteCommands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoteCommands.Designer.cs">
+    <Compile Include="Sources\RemoteCommands.Designer.cs">
       <DependentUpon>RemoteCommands.cs</DependentUpon>
     </Compile>
-    <Compile Include="upnp.cs" />
-    <Compile Include="VideoSource.cs">
+    <Compile Include="Sources\upnp.cs" />
+    <Compile Include="Sources\VideoSource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VideoSource.Designer.cs">
+    <Compile Include="Sources\VideoSource.Designer.cs">
       <DependentUpon>VideoSource.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs">
+    <Compile Include="Sources\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Sources\Settings.Designer.cs">
+      <DependentUpon>Sources\Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Sources\Program.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="VirtualDeviceManager.cs">
+    <Compile Include="Sources\VirtualDeviceManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VirtualDeviceManager.Designer.cs">
+    <Compile Include="Sources\VirtualDeviceManager.Designer.cs">
       <DependentUpon>VirtualDeviceManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Vision\BlobCountingObjectsProcessing.cs" />
@@ -1172,13 +1140,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Webservices.cs">
+    <Compile Include="Sources\Webservices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Webservices.Designer.cs">
+    <Compile Include="Sources\Webservices.Designer.cs">
       <DependentUpon>Webservices.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Sources\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -1186,9 +1154,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WinAPI.cs" />
-    <Compile Include="WSWrapper.cs" />
-    <Compile Include="X509.cs" />
+    <Compile Include="Sources\WinAPI.cs" />
+    <Compile Include="Sources\WSWrapper.cs" />
+    <Compile Include="Sources\X509.cs" />
     <Compile Include="XML\config.cs">
       <DependentUpon>config.xsd</DependentUpon>
     </Compile>
@@ -1217,15 +1185,8 @@
     <Content Include="backgrounds\FloorPlan_Planet.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="chk.png" />
-    <Content Include="Commands\example.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Merge Modules\Microsoft_VC100_CRT_x64.msm" />
-    <None Include="packages.config" />
-    <None Include="README.md" />
-    <None Include="redist\Windows6.0-KB942288-v2-x64.msu" />
-    <None Include="redist\Windows6.0-KB942288-v2-x86.msu" />
+    <None Include="Sources\chk.png" />
+    <None Include="Sources\packages.config" />
     <None Include="Resources\cam_connecting.png" />
     <None Include="Resources\cam_offline.png" />
     <None Include="Resources\cam_removed.png" />
@@ -1234,9 +1195,6 @@
     <Content Include="Masks\demo_mask.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="redist\WindowsServer2003-KB942288-v4-x64.exe" />
-    <Content Include="redist\WindowsServer2003-KB942288-v4-x86.exe" />
-    <Content Include="redist\WindowsXP-KB942288-v3-x86.exe" />
     <None Include="Service References\OnvifServices\configuration91.svcinfo" />
     <None Include="Service References\OnvifServices\configuration.svcinfo" />
     <None Include="Service References\OnvifServices\iSpyApplication.OnvifServices.AddScopesResponse.datasource">
@@ -2171,9 +2129,7 @@
     <Content Include="sounds\spanielgrowlbark.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="lgpl-3.0.txt" />
-    <Content Include="license.txt" />
-    <None Include="App.config">
+    <None Include="Sources\App.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="Resources\ispy.png" />
@@ -2322,14 +2278,9 @@
     <None Include="Service References\OnvifServices\xmlmime.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Supporting\iSpyServerSetup.msi" />
-    <None Include="System.Xml.XmlAttribute.datasource" />
-    <None Include="System.Xml.XmlElement.datasource" />
+    <None Include="Sources\System.Xml.XmlAttribute.datasource" />
+    <None Include="Sources\System.Xml.XmlElement.datasource" />
     <None Include="Web References\iSpyWS\ispysecure.disco" />
-    <Content Include="Supporting\iSpyMonitor.exe" />
-    <Content Include="VLC64\readme.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="WebServerRoot\notfound.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2353,7 +2304,7 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="app.manifest">
+    <None Include="Sources\app.manifest">
       <SubType>Designer</SubType>
     </None>
     <None Include="Resources\PTZ_Controller.png" />
@@ -2376,21 +2327,21 @@
     <Content Include="WebServerRoot\log.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="AboutForm.resx">
+    <EmbeddedResource Include="Sources\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCamera.resx">
+    <EmbeddedResource Include="Sources\AddCamera.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AddCamera.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddFloorPlan.resx">
+    <EmbeddedResource Include="Sources\AddFloorPlan.resx">
       <DependentUpon>AddFloorPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddRemoteCommand.resx">
+    <EmbeddedResource Include="Sources\AddRemoteCommand.resx">
       <DependentUpon>AddRemoteCommand.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CommandButtons.resx">
+    <EmbeddedResource Include="Sources\CommandButtons.resx">
       <DependentUpon>CommandButtons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ActionEditor.resx">
@@ -2511,45 +2462,42 @@
     <EmbeddedResource Include="Controls\VideoPlayback.resx">
       <DependentUpon>VideoPlayback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features.resx">
+    <EmbeddedResource Include="Sources\Features.resx">
       <DependentUpon>Features.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindObject.resx">
+    <EmbeddedResource Include="Sources\FindObject.resx">
       <DependentUpon>FindObject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridViewManager.resx">
+    <EmbeddedResource Include="Sources\GridViewManager.resx">
       <DependentUpon>GridViewManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Importer.resx">
+    <EmbeddedResource Include="Sources\Importer.resx">
       <DependentUpon>Importer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Kinect\ConfigureTripWires.resx">
-      <DependentUpon>ConfigureTripWires.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\AngleSelector.resx">
       <DependentUpon>AngleSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CameraMicSource.resx">
+    <EmbeddedResource Include="Sources\CameraMicSource.resx">
       <DependentUpon>CameraMicSource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CheckPassword.resx">
+    <EmbeddedResource Include="Sources\CheckPassword.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CheckPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddMicrophone.resx">
+    <EmbeddedResource Include="Sources\AddMicrophone.resx">
       <DependentUpon>AddMicrophone.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigureProcessor.resx">
+    <EmbeddedResource Include="Sources\ConfigureProcessor.resx">
       <DependentUpon>ConfigureProcessor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigureTimestamp.resx">
+    <EmbeddedResource Include="Sources\ConfigureTimestamp.resx">
       <DependentUpon>ConfigureTimestamp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigureObjectCount.resx">
+    <EmbeddedResource Include="Sources\ConfigureObjectCount.resx">
       <DependentUpon>ConfigureObjectCount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigureRepeat.resx">
+    <EmbeddedResource Include="Sources\ConfigureRepeat.resx">
       <DependentUpon>ConfigureRepeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Ranger.resx">
@@ -2559,112 +2507,106 @@
       <DependentUpon>GridView.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="downloader.resx">
+    <EmbeddedResource Include="Sources\downloader.resx">
       <DependentUpon>downloader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridView.resx">
+    <EmbeddedResource Include="Sources\GridView.resx">
       <DependentUpon>GridView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kinect\EditDepthLine.resx">
-      <DependentUpon>EditDepthLine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Merger.resx">
+    <EmbeddedResource Include="Sources\Merger.resx">
       <DependentUpon>Merger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MicrophoneSourceAdvanced.resx">
+    <EmbeddedResource Include="Sources\MicrophoneSourceAdvanced.resx">
       <DependentUpon>MicrophoneSourceAdvanced.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NotSubscribed.resx">
+    <EmbeddedResource Include="Sources\NotSubscribed.resx">
       <DependentUpon>NotSubscribed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pager.resx">
+    <EmbeddedResource Include="Sources\Pager.resx">
       <DependentUpon>Pager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pelco\PelcoConfig.resx">
       <DependentUpon>PelcoConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayerVLC.resx">
+    <EmbeddedResource Include="Sources\PlayerVLC.resx">
       <DependentUpon>PlayerVLC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Prompt.resx">
+    <EmbeddedResource Include="Sources\Prompt.resx">
       <DependentUpon>Prompt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PTZConfig.resx">
+    <EmbeddedResource Include="Sources\PTZConfig.resx">
       <DependentUpon>PTZConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PTZTool.resx">
+    <EmbeddedResource Include="Sources\PTZTool.resx">
       <DependentUpon>PTZTool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShareCamera.resx">
+    <EmbeddedResource Include="Sources\ShareCamera.resx">
       <DependentUpon>ShareCamera.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SSLConfig.resx">
+    <EmbeddedResource Include="Sources\SSLConfig.resx">
       <DependentUpon>SSLConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TagConfigure.resx">
+    <EmbeddedResource Include="Sources\TagConfigure.resx">
       <DependentUpon>TagConfigure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Utilities\ScreenArea.resx">
       <DependentUpon>ScreenArea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VideoSourceAdvanced.resx">
+    <EmbeddedResource Include="Sources\VideoSourceAdvanced.resx">
       <DependentUpon>VideoSourceAdvanced.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\VolumeLevel.resx">
       <DependentUpon>VolumeLevel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindCameras.resx">
+    <EmbeddedResource Include="Sources\FindCameras.resx">
       <DependentUpon>FindCameras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GettingStarted.resx">
-      <DependentUpon>GettingStarted.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HSLFilteringForm.resx">
+    <EmbeddedResource Include="Sources\HSLFilteringForm.resx">
       <DependentUpon>HSLFilteringForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NetworkTroubleshooter.resx">
+    <EmbeddedResource Include="Sources\NetworkTroubleshooter.resx">
       <DependentUpon>NetworkTroubleshooter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FloorPlan.resx">
       <DependentUpon>FloorPlan.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigureSeconds.resx">
+    <EmbeddedResource Include="Sources\ConfigureSeconds.resx">
       <DependentUpon>ConfigureSeconds.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LayoutEditor.resx">
+    <EmbeddedResource Include="Sources\LayoutEditor.resx">
       <DependentUpon>LayoutEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MicrophoneSource.resx">
+    <EmbeddedResource Include="Sources\MicrophoneSource.resx">
       <DependentUpon>MicrophoneSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoteCommands.resx">
+    <EmbeddedResource Include="Sources\RemoteCommands.resx">
       <DependentUpon>RemoteCommands.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\VideoNavigator.resx">
       <DependentUpon>VideoNavigator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewController.resx">
+    <EmbeddedResource Include="Sources\ViewController.resx">
       <DependentUpon>ViewController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VideoSource.resx">
+    <EmbeddedResource Include="Sources\VideoSource.resx">
       <DependentUpon>VideoSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
+    <EmbeddedResource Include="Sources\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="VirtualDeviceManager.resx">
+    <EmbeddedResource Include="Sources\VirtualDeviceManager.resx">
       <DependentUpon>VirtualDeviceManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Webservices.resx">
+    <EmbeddedResource Include="Sources\Webservices.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Webservices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Sources\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -2673,12 +2615,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="App.ico" />
-    <Content Include="detected.png" />
-    <Content Include="ispy.ico">
+    <Content Include="Sources\App.ico" />
+    <Content Include="Sources\detected.png" />
+    <Content Include="Sources\ispy.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="nothing.png" />
+    <Content Include="Sources\nothing.png" />
     <None Include="Web References\iSpyWS\ispysecure.wsdl" />
     <None Include="Web References\Reporting\reporting.disco">
       <SubType>Designer</SubType>
@@ -2831,10 +2773,6 @@
       <DependentUpon>AreaSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewVersion.resx">
-      <DependentUpon>NewVersion.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\1.gif" />
     <EmbeddedResource Include="Resources\2.gif" />
     <EmbeddedResource Include="Resources\3.gif" />
@@ -2936,10 +2874,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\x86\" />
     <Folder Include="DLLS\x64\" />
-    <Folder Include="WebServerRoot\Media\Audio\" />
-    <Folder Include="WebServerRoot\Media\Video\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

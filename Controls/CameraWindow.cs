@@ -3572,8 +3572,6 @@ namespace iSpyApplication.Controls
                         msg = s;
                     else
                     {
-                        if (sender is KinectStream)
-                            msg = "Trip Wire";
                     }
                     DoAlert("alert", msg);
                 }
@@ -4175,19 +4173,6 @@ namespace iSpyApplication.Controls
                             }
                         }
 
-                        var source = Camera.VideoSource as KinectStream;
-                        if (source != null)
-                        {
-                            source.TripWire -= Alert;
-                        }
-
-                        var source1 = Camera.VideoSource as KinectNetworkStream;
-                        if (source1 != null)
-                        {
-                            //remove the alert handler from the source stream
-                            source1.AlertHandler -= CameraWindow_AlertHandler;
-                        }
-
                         var audiostream = Camera.VideoSource as ISupportsAudio;
                         if (audiostream != null)
                         {
@@ -4445,27 +4430,7 @@ namespace iSpyApplication.Controls
                             XimeaSource =
                                 new XimeaVideoSource(this);
                         OpenVideoSource(XimeaSource, true);
-                        break;
-                    case 7:
-                        var ks = new KinectStream(this);                            
-                        OpenVideoSource(ks, true);                        
-                        break;
-                    case 8:
-                        switch (Nv(Camobject.settings.namevaluesettings, "custom"))
-                        {
-                            case "Network Kinect":
-                                // open the network kinect video stream
-                                OpenVideoSource(new KinectNetworkStream(this), true);
-                                break;
-                            default:
-                                lock (_lockobject)
-                                {
-                                    IsEnabled = false;
-                                }
-                                throw new Exception("No custom provider found for " +
-                                                    Nv(Camobject.settings.namevaluesettings, "custom"));
-                        }
-                        break;
+                        break; 
                     case 9:
                         _sourceOverload = "onvif";
                         
@@ -5016,21 +4981,7 @@ namespace iSpyApplication.Controls
                     Camobject.settings.vlcHeight = 480;
                 }
             }
-
-            var kinectStream = source as KinectStream;
-            if (kinectStream != null)
-            {
-                kinectStream.InitTripWires(Camobject.alerts.pluginconfig);
-                kinectStream.TripWire += Alert;
-            }
-
-            var kinectNetworkStream = source as KinectNetworkStream;
-            if (kinectNetworkStream != null)
-            {
-                //add the camera alert handler hook to the provider
-                kinectNetworkStream.AlertHandler += CameraWindow_AlertHandler;
-            }
-
+           
             var audiostream = source as ISupportsAudio;
             if (audiostream != null)
             {

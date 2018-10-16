@@ -20,10 +20,6 @@ namespace iSpyApplication.Sources.Audio.talk
                     talkTarget = new TalkiSpyServer(cam.settings.audioip, cam.settings.audioport,
                         source);
                     break;
-                case "NetworkKinect":
-                    talkTarget = new TalkNetworkKinect(cam.settings.audioip, cam.settings.audioport,
-                        source);
-                    break;
                 case "Axis":
                     talkTarget = new TalkAxis(cam.settings.audioip, cam.settings.audioport,
                         cam.settings.audiousername, cam.settings.audiopassword, source);
